@@ -4,6 +4,6 @@
    •This website gives the information about the bitcoin.<br/>
    •this website uses api to display the crypto information.
    
-   ### under development
+   ### live website
    
    https://b-chandru.github.io/crypto/
