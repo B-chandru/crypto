@@ -1,10 +1,11 @@
 
-var div = document.getElementById("contain")
+var div = document.getElementById("contain");
+var total = document.querySelector("#total");
 
 
 fetch('https://api.coinlore.net/api/coin/markets/?id=90')
 .then(response => response.json())
-.then(quote =>console.log(quote.map(element => {
+.then(quote =>quote.map(element => {
   for (const ele in element) {
   var a= `<div class="q1">
  <h1>${element.name}</h1>
@@ -17,5 +18,39 @@ fetch('https://api.coinlore.net/api/coin/markets/?id=90')
  <h2> Time :<span>${element.time}</span></h2>
 </div>`
   }
+
   div.insertAdjacentHTML('beforeend', a);
-})))
+}))
+.then(quote =>{
+  total.innerHTML=quote.length;
+})
+.catch(err =>{
+  console.log(err.message);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
